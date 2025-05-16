@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { getArticles, getTags } from "./services/getData";
+import Home from "./components/home";
 
 function App() {
-  const [article, setArticle] = useState();
+  const [article, setArticle] = useState([]);
   const [tags, setTags] = useState();
 
   useEffect(() => {
     Promise.all([getArticles(article), getTags(tags)])
-      .then(([article, tags]) => {
-        setArticle(article);
-        setTags(tags);
-        console.log(article);
+      .then(([articleData, tagsData]) => {
+        setArticle(articleData);
+        setTags(tagsData);
+        console.log(articleData);
       })
       .catch((error) => {
         console.error(error);
@@ -18,9 +19,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <h1>Artigo mais popular</h1>
-    </>
+    <Home
+      article={article}
+      authors="+ 999 autores"
+      title="Fique por dentro de todas novidades do mundo Dev!"
+    />
   );
 }
 export default App;
