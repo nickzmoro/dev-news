@@ -4,3 +4,12 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-gray-950;
+}

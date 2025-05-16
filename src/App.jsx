@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles, getTags } from "./services/getData";
 import Home from "./components/home";
+import LatestNews from "./components/latestNews";
 
 function App() {
   const [article, setArticle] = useState([]);
@@ -19,11 +20,14 @@ function App() {
   }, []);
 
   return (
-    <Home
-      article={article}
-      authors="+ 999 autores"
-      title="Fique por dentro de todas novidades do mundo Dev!"
-    />
+    <>
+      <Home
+        article={article}
+        authors="+ 999 autores"
+        title="Fique por dentro de todas novidades do mundo Dev!"
+      />
+      <LatestNews article={article} />
+    </>
   );
 }
 export default App;
