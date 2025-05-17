@@ -1,4 +1,5 @@
-import { TbCalendarTime } from "react-icons/tb";
+import { MdOutlineOpenInNew } from "react-icons/md";
+import Poster from "../posterContainer";
 
 const LatestNews = ({ article }) => {
   return (
@@ -13,55 +14,73 @@ const LatestNews = ({ article }) => {
           </div>
           <div className="text-[#fff] grid grid-cols-2 gap-4 mt-5">
             <div
-              className={`relative overflow-hidden border border-[#242424] flex items-end col-span-1 row-span-2 h-[600px] rounded-[12px] p-8 bg-[url("${article[1].cover_image}")] bg-cover bg-center bg-no-repeat`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between col-span-1 row-span-2 h-[600px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
-              <div className="absolute inset-0 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-black/50 rounded-[12px] pointer-events-none -z-0"></div>
-              <div className="relative">
-                <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem] mb-3">
-                  <TbCalendarTime size={16} />{" "}
-                  {article[1].readable_publish_date}
-                </span>
-                <h4 className="text-[1.1rem] font-[500] mb-1">
-                  {article[1].title}
-                </h4>
-                <p className="text-[rgba(256,_256,_256,_0.75)]">
-                  {article[1].description}
-                </p>
+              <div className="flex justify-end">
+                <a
+                  href={article[1].url}
+                  className="group cursor-pointer z-10"
+                  target="_blank"
+                >
+                  <MdOutlineOpenInNew
+                    size={25}
+                    className="group-hover:text-gray-500 transition-all duration-300 ease-in-out"
+                  />
+                </a>
               </div>
+              <Poster
+                articleImage={article[1].cover_image}
+                articleDate={article[1].readable_publish_date}
+                articleTimeToRead={article[1].reading_time_minutes}
+                articleDescription={article[1].description}
+                articleTitle={article[1].title}
+              />
             </div>
             <div
-              className={`relative overflow-hidden border border-[#242424] flex items-end h-[289px] rounded-[12px] p-8 bg-[url("${article[2].cover_image}")] bg-cover bg-center bg-no-repeat`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
-              <div className="absolute inset-0 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-black/50 rounded-[12px] pointer-events-none -z-0"></div>
-              <div className="relative">
-                <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem] mb-3">
-                  <TbCalendarTime size={16} />{" "}
-                  {article[2].readable_publish_date}
-                </span>
-                <h4 className="text-[1.1rem] font-[500] mb-1">
-                  {article[2].title}
-                </h4>
-                <p className="text-[rgba(256,_256,_256,_0.75)]">
-                  {article[2].description}
-                </p>
+              <div className="flex justify-end">
+                <a
+                  href={article[2].url}
+                  className="group cursor-pointer z-10"
+                  target="_blank"
+                >
+                  <MdOutlineOpenInNew
+                    size={25}
+                    className="group-hover:text-gray-300 transition-all duration-300 ease-in-out"
+                  />
+                </a>
               </div>
+              <Poster
+                articleImage={article[2].cover_image}
+                articleDate={article[2].readable_publish_date}
+                articleTimeToRead={article[2].reading_time_minutes}
+                articleDescription={article[2].description}
+                articleTitle={article[2].title}
+              />
             </div>
             <div
-              className={`relative overflow-hidden border border-[#242424] flex items-end h-[289px] rounded-[12px] p-8 bg-[url("${article[3].cover_image}")] bg-cover bg-center bg-no-repeat`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
-              <div className="absolute inset-0 top-0 left-0 w-full h-full bg-gradient-to-t from-black to-black/50 rounded-[12px] pointer-events-none -z-0"></div>
-              <div className="relative">
-                <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem] mb-3">
-                  <TbCalendarTime size={16} />{" "}
-                  {article[3].readable_publish_date}
-                </span>
-                <h4 className="text-[1.1rem] font-[500] mb-1">
-                  {article[3].title}
-                </h4>
-                <p className="text-[rgba(256,_256,_256,_0.75)]">
-                  {article[3].description}
-                </p>
+              <div className="flex justify-end">
+                <a
+                  href={article[3].url}
+                  className="group cursor-pointer z-10"
+                  target="_blank"
+                >
+                  <MdOutlineOpenInNew
+                    size={25}
+                    className="group-hover:text-gray-500 transition-all duration-300 ease-in-out"
+                  />
+                </a>
               </div>
+              <Poster
+                articleImage={article[3].cover_image}
+                articleDate={article[3].readable_publish_date}
+                articleTimeToRead={article[3].reading_time_minutes}
+                articleDescription={article[3].description}
+                articleTitle={article[3].title}
+              />
             </div>
           </div>
         </div>
