@@ -9,7 +9,7 @@ const Home = ({ authors, title, article }) => {
         <>
           <div className="absolute top-0 left-0 w-screen h-screen">
             <img
-              src={article[0].cover_image}
+              src={article[0].social_image}
               alt=""
               className="w-full h-full opacity-5"
             />

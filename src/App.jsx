@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getArticles, getTags } from "./services/getData";
 import Home from "./components/home";
 import LatestNews from "./components/latestNews";
+import FilterPage from "./components/filterTagPage";
 
 function App() {
   const [article, setArticle] = useState([]);
@@ -27,6 +28,7 @@ function App() {
         title="Fique por dentro de todas novidades do mundo Dev!"
       />
       <LatestNews article={article} />
+      <FilterPage article={article} />
     </>
   );
 }

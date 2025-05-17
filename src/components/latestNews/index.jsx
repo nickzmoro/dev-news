@@ -29,7 +29,7 @@ const LatestNews = ({ article }) => {
                 </a>
               </div>
               <Poster
-                articleImage={article[1].cover_image}
+                articleImage={article[1].social_image}
                 articleDate={article[1].readable_publish_date}
                 articleTimeToRead={article[1].reading_time_minutes}
                 articleDescription={article[1].description}
@@ -52,7 +52,7 @@ const LatestNews = ({ article }) => {
                 </a>
               </div>
               <Poster
-                articleImage={article[2].cover_image}
+                articleImage={article[2].social_image}
                 articleDate={article[2].readable_publish_date}
                 articleTimeToRead={article[2].reading_time_minutes}
                 articleDescription={article[2].description}
@@ -75,7 +75,7 @@ const LatestNews = ({ article }) => {
                 </a>
               </div>
               <Poster
-                articleImage={article[3].cover_image}
+                articleImage={article[3].social_image}
                 articleDate={article[3].readable_publish_date}
                 articleTimeToRead={article[3].reading_time_minutes}
                 articleDescription={article[3].description}
