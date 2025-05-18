@@ -13,6 +13,7 @@ const Home = ({ authors, title, article }) => {
               alt=""
               className="w-full h-full opacity-5"
             />
+            <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-gray-950 to-gray-950/0"></div>
           </div>
           <div className="w-[80%] h-[100%] flex flex-col items-center justify-center mb-10 z-10">
             <div className="flex items-center gap-2">
