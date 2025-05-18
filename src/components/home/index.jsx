@@ -81,8 +81,8 @@ const Home = ({ authors, title, article }) => {
               <div className="flex justify-between items-center pt-2.5 border-t border-t-[#ffffff17]">
                 <div>
                   <a
-                    href={`${article[0].canonical_url}`}
-                    className="text-[#ffffffc0] font-[500] flex items-center gap-1.5"
+                    href={`${article[0].url}`}
+                    className="text-[#ffffffc0] font-[500] flex items-center gap-1.5 hover:text-[#ffffffe8] transition-colors duration-300"
                     target="_blank"
                   >
                     <FiPaperclip /> Ver completo
