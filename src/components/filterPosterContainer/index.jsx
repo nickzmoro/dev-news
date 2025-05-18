@@ -1,4 +1,4 @@
-import { TbCalendarTime } from "react-icons/tb";
+import { TbBook, TbCalendarTime } from "react-icons/tb";
 import { MdOutlineOpenInNew } from "react-icons/md";
 
 const FilterPosterContainer = ({ item }) => {
@@ -21,9 +21,15 @@ const FilterPosterContainer = ({ item }) => {
             ></img>
             <div>
               <p>{item.user.name}</p>
-              <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem]">
-                <TbCalendarTime size={16} /> {item.readable_publish_date}
-              </span>
+              <div className="flex gap-3 items-center">
+                <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem]">
+                  <TbCalendarTime size={16} /> {item.readable_publish_date}
+                </span>
+                <span className="text-[rgba(256,_256,_256,_0.75)] flex gap-1.5 items-center text-[0.9rem]">
+                  <TbBook size={17} /> {item.reading_time_minutes} min de
+                  leitura
+                </span>
+              </div>
             </div>
           </div>
           <div className="mt-4">

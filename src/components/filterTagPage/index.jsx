@@ -14,8 +14,6 @@ const FilterPage = ({ article }) => {
     return filterArticlesByTag;
   };
 
-  console.log(article);
-
   return (
     <section className="w-screen min-h-screen flex items-start justify-center">
       <div className="w-[80%] h-auto flex flex-col items-start justify-start">
