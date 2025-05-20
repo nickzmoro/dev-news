@@ -16,10 +16,10 @@ const FilterPage = ({ article }) => {
 
   return (
     <section className="w-screen min-h-screen flex items-start justify-center">
-      <div className="w-[80%] h-auto flex flex-col items-start justify-start">
-        <div className="flex gap-5 mb-10">
+      <div className="w-[80%] max-sm:w-[90%] h-auto flex flex-col items-start justify-start overflow-hidden">
+        <div className="flex gap-5 mb-10 max-md:overflow-x-scroll">
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               showAllArticles &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
@@ -31,7 +31,7 @@ const FilterPage = ({ article }) => {
             Tudo
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               activeTag === "react" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
@@ -40,7 +40,7 @@ const FilterPage = ({ article }) => {
             React
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               activeTag === "javascript" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
@@ -49,16 +49,16 @@ const FilterPage = ({ article }) => {
             JavaScript
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit w-fit hover:text-[#ffffffad] ${
               activeTag === "webdev" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
             onClick={() => filteredArticles("webdev")}
           >
-            Web Dev
+            WebDev
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               activeTag === "ai" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
@@ -67,7 +67,7 @@ const FilterPage = ({ article }) => {
             IA
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               activeTag === "programming" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}
@@ -76,7 +76,7 @@ const FilterPage = ({ article }) => {
             Programação
           </button>
           <button
-            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 hover:text-[#ffffffad] ${
+            className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               activeTag === "python" &&
               "text-[#fff] font-[600] border-b-2 border-b-[#fff] hover:text-[#ffffffe3]"
             }`}

@@ -5,16 +5,16 @@ const LatestNews = ({ article }) => {
   return (
     <section className="w-screen min-h-screen flex items-center justify-center">
       {article && article.length > 0 ? (
-        <div className="w-[80%] h-[auto]">
-          <div className="flex items-center w-full justify-between">
-            <h3 className="text-[#fff] w-[200px] text-[1.3rem] font-[500]">
+        <div className="w-[80%] max-sm:w-[90%] h-[auto] max-md:mt-[100px]">
+          <div className="flex gap-1 items-center w-full justify-between">
+            <h3 className="text-[#fff] w-[200px] text-[1.3rem] font-[500] max-md:w-[350px]">
               Últimas notícias
             </h3>
             <div className="h-[1px] w-full bg-[#ffffff75]"></div>
           </div>
-          <div className="text-[#fff] grid grid-cols-2 gap-4 mt-5">
+          <div className="text-[#fff] grid grid-cols-2 gap-4 mt-5 max-md:mt-10 max-md:mb-[100px] max-md:grid-cols-1">
             <div
-              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between col-span-1 row-span-2 h-[600px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between col-span-1 row-span-2 max-md:h-[400px] h-[600px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
               <div className="flex justify-end">
                 <a
@@ -37,7 +37,7 @@ const LatestNews = ({ article }) => {
               />
             </div>
             <div
-              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between max-md:h-[400px] h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
               <div className="flex justify-end">
                 <a
@@ -60,7 +60,7 @@ const LatestNews = ({ article }) => {
               />
             </div>
             <div
-              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
+              className={`relative overflow-hidden border border-[#242424] flex flex-col justify-between max-md:h-[400px] h-[289px] rounded-[12px] p-8 hover:shadow-[0_0_20px_rgba(255,_255,_255,_0.05)] hover:scale-[100.5%] transition-all duration-300 ease-in-out`}
             >
               <div className="flex justify-end">
                 <a

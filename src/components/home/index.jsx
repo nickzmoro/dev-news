@@ -15,7 +15,7 @@ const Home = ({ authors, title, article }) => {
             />
             <div className="absolute top-0 left-0 w-full h-full bg-linear-to-t from-gray-950 to-gray-950/0"></div>
           </div>
-          <div className="w-[80%] h-[100%] flex flex-col items-center justify-center mb-10 z-10">
+          <div className="w-[80%] max-sm:w-[90%] h-[100%] flex flex-col items-center justify-center mb-10 z-10">
             <div className="flex items-center gap-2">
               <div className="flex">
                 <div className="w-[35px] h-[35px] bg-black rounded-full">
@@ -49,8 +49,8 @@ const Home = ({ authors, title, article }) => {
               </div>
               <p className="text-[#DADADA] font-[500]">{authors}</p>
             </div>
-            <div className="mt-5 mb-[50px]">
-              <h2 className="text-[#fff] text-[3rem] font-[700] max-w-[850px] text-center leading-[60px]">
+            <div className="mt-5 mb-[50px] max-sm:mb-[25px]">
+              <h2 className="text-[#fff] text-[3rem] font-[700] max-w-[850px] text-center leading-[60px] max-sm:text-[2.5rem] max-sm:leading-[50px]">
                 {title}
               </h2>
             </div>

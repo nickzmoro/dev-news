@@ -11,7 +11,7 @@ const ArticleVideos = ({ video }) => {
   return (
     <section className="w-screen min-h-screen flex items-center justify-center text-[#fff]">
       {video && video.length > 0 ? (
-        <div className="w-[80%] h-auto">
+        <div className="w-[80%] h-auto max-sm:w-[90%]">
           <div className="flex items-center gap-5">
             <h3 className="text-[1.3rem] font-[500]">Videos</h3>
             <div className="w-full h-[1px] bg-[#ffffff75]"></div>
