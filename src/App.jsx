@@ -22,14 +22,12 @@ function App() {
       });
   }, []);
 
-  console.log(video);
-
   return (
     <>
       <Home
         article={article}
         authors="+ 999 autores"
-        title="Fique por dentro de todas novidades do mundo Dev!"
+        title="Fique por dentro de todas novidades <dev/>"
       />
       <LatestNews article={article} />
       <FilterPage article={article} />
