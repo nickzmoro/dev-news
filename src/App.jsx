@@ -4,6 +4,8 @@ import Home from "./components/home";
 import LatestNews from "./components/latestNews";
 import FilterPage from "./components/filterTagPage";
 import ArticleVideos from "./components/articleVideos";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   const [article, setArticle] = useState([]);
@@ -24,6 +26,7 @@ function App() {
 
   return (
     <>
+      <Header article={article} />
       <Home
         article={article}
         authors="+ 999 autores"
@@ -32,6 +35,7 @@ function App() {
       <LatestNews article={article} />
       <FilterPage article={article} />
       <ArticleVideos video={video} />
+      <Footer />
     </>
   );
 }
