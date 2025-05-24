@@ -10,7 +10,8 @@ A proposta é simples: entregar conteúdo técnico de forma elegante, fluida e o
 
 ## 📸 Preview
 
-![dev-news-preview](https://user-images.githubusercontent.com/seu-usuario/aqui-exemplo.png)  
+![image](https://github.com/user-attachments/assets/5a4d2cc7-6e35-45c7-a900-9c4f82df3c99)
+
 
 ## 🎯 Objetivo
 
