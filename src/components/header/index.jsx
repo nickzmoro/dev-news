@@ -12,7 +12,9 @@ const Header = ({ article }) => {
       setSearchResult([]);
     } else {
       setSearchResult(
-        article.filter((item) => item.tags.includes(captureInputValue))
+        article.filter((item) =>
+          item.tags.includes(captureInputValue.toLowerCase())
+        )
       );
     }
   };
