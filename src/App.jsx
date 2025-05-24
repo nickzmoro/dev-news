@@ -13,15 +13,17 @@ function App() {
   const [video, setVideo] = useState([]);
 
   useEffect(() => {
-    Promise.all([getArticles(article), getTags(tags), getVideos(video)])
-      .then(([articleData, tagsData, videoData]) => {
-        setArticle(articleData);
-        setTags(tagsData);
-        setVideo(videoData);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    setTimeout(() => {
+      Promise.all([getArticles(article), getTags(tags), getVideos(video)])
+        .then(([articleData, tagsData, videoData]) => {
+          setArticle(articleData);
+          setTags(tagsData);
+          setVideo(videoData);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }, 100);
   }, []);
 
   return (

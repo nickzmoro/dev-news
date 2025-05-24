@@ -15,7 +15,6 @@ const Header = ({ article }) => {
         article.filter((item) => item.tags.includes(captureInputValue))
       );
     }
-    console.log(searchResult);
   };
 
   return (

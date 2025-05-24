@@ -17,7 +17,7 @@ const FilterPage = ({ article }) => {
   return (
     <section className="w-screen min-h-screen flex items-start justify-center">
       <div className="w-[80%] max-sm:w-[90%] h-auto flex flex-col items-start justify-start overflow-hidden">
-        <div className="flex gap-5 mb-10 max-md:overflow-x-scroll">
+        <div className="flex gap-5 mb-10 overflow-x-auto w-full">
           <button
             className={`text-[#ffffffe3] text-[1.1rem] cursor-pointer p-1 h-fit hover:text-[#ffffffad] ${
               showAllArticles &&
@@ -89,10 +89,21 @@ const FilterPage = ({ article }) => {
           {showAllArticles
             ? article
                 .slice(0, 5)
-                ?.map((item) => <FilterPosterContainer item={item} />)
+                ?.map((item) => (
+                  <FilterPosterContainer item={item} key={item.id} />
+                ))
             : filterArticlesByTag
                 .slice(0, 5)
-                ?.map((item) => <FilterPosterContainer item={item} />)}
+                ?.map((item) => (
+                  <FilterPosterContainer item={item} key={item.id} />
+                ))}
+          {filterArticlesByTag?.length === 0 && (
+            <div className="w-full h-full flex items-center justify-center">
+              <p className="text-[#ffffffe3] text-[1.1rem]">
+                Nenhum artigo encontrado...
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </section>

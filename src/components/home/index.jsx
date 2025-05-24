@@ -1,6 +1,8 @@
 import { FiPaperclip } from "react-icons/fi";
 import { SlLike } from "react-icons/sl";
 import { FaRegComment } from "react-icons/fa";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const Home = ({ authors, title, article }) => {
   return (
@@ -107,7 +109,9 @@ const Home = ({ authors, title, article }) => {
           </div>
         </>
       ) : (
-        <p>Carregando artigos...</p>
+        <Box sx={{ display: "flex" }}>
+          <CircularProgress />
+        </Box>
       )}
     </section>
   );
